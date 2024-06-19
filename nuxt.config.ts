@@ -8,4 +8,7 @@ export default defineNuxtConfig({
 		},
 		display: 'swap',
 	},
+	alias: {
+		images: '@/assets',
+	},
 })

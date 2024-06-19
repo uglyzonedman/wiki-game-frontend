@@ -1,28 +1,27 @@
 <template>
-	<section class="news">
-		<div class="news-container">
-			<div class="news-header">
-				<div class="news-header__left">
-					<Icon
-						name="material-symbols:breaking-news-alt-1-outline"
-						size="32px"
-						color="#CECECE"
-					/>
-					<h3 class="news-header__left__title">Новости</h3>
+	<section class="tournaments">
+		<div class="tournaments-container">
+			<div class="tournaments-headers">
+				<div class="tournaments-headers__left">
+					<Icon name="solar:cup-bold" color="#C7B147" size="36px" />
+					<h3 class="tournaments-headers__left__title">Турниры</h3>
 				</div>
-				<button class="news-header__right">Показать все</button>
+				<button class="tournaments-headers__right">Показать все</button>
 			</div>
-			<div class="news-items">
-				<HomeNewsNew v-for="item of 8" :key="item" />
+			<div class="tournaments-items">
+				<HomeTournamentsTournament v-for="item of 8" :key="item" />
 			</div>
 		</div>
 	</section>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts" setup>
+import IconLeader from '../../../assets/leader.svg'
+</script>
 
 <style lang="scss" scoped>
-.news {
+.tournaments {
+	margin-top: 40px;
 	&-container {
 		max-width: 1488px;
 		margin: 0 auto;
@@ -35,7 +34,7 @@
 		row-gap: 20px;
 		column-gap: 16px;
 	}
-	&-header {
+	&-headers {
 		margin-top: 40px;
 		display: flex;
 		align-items: center;

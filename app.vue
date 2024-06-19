@@ -16,6 +16,11 @@ html,
 body {
 	font-family: 'Oswald', serif;
 	background: #000000;
+	height: 100%;
+}
+
+#__nuxt {
+	height: 100%;
 }
 ul[class],
 ol[class] {
@@ -37,14 +42,6 @@ blockquote,
 dl,
 dd {
 	margin: 0;
-}
-
-body {
-	min-height: 100vh;
-	scroll-behavior: smooth;
-	text-rendering: optimizeSpeed;
-	line-height: 1.5;
-	/* background: #0a0a0a; */
 }
 
 ul[class],

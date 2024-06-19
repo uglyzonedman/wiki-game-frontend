@@ -2,6 +2,7 @@
 	<div class="home">
 		<HomeIntro />
 		<HomeNews />
+		<HomeTournaments />
 	</div>
 </template>
 

@@ -40,7 +40,6 @@
 </template>
 
 <script lang="ts" setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
 const router = useRouter()
 
 const introText = ref<HTMLElement | null>(null)
@@ -68,10 +67,10 @@ onMounted(() => {
 
 		const introHeight: number = intro.offsetHeight
 		const scrollY: number = window.scrollY
-
-		if (scrollY <= introHeight) {
-			video.style.transform = `translateY(${scrollY * 0.5}px)`
-		}
+		//TODO
+		// if (scrollY <= introHeight) {
+		// 	video.style.transform = `translateY(${scrollY * 0.5}px)`
+		// }
 	}
 
 	window.addEventListener('scroll', handleScroll)
@@ -86,7 +85,7 @@ onMounted(() => {
 .home {
 	&-intro {
 		position: relative;
-		height: 100vh;
+		height: 97vh;
 		overflow: hidden;
 
 		&__video {
@@ -98,7 +97,7 @@ onMounted(() => {
 			object-fit: cover;
 			transform: translateY(0);
 			transition: transform 0.1s linear;
-			opacity: 0.5; /* Полупрозрачность видео */
+			opacity: 0.8; /* Полупрозрачность видео */
 		}
 
 		&__text {
